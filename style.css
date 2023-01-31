@@ -1,48 +1,156 @@
 /***********/
+/* GENERAL */
+/***********/
+:root {
+	--color-primary: #96001F;
+	--color-secondary: #96740F;
+	--color-dark: #00214D;
+	--color-darker: #004A0C;
+	--color-light: #FDE24F;
+	--color-offwhite: #fdfdfd;
+	--color-lightgray: rgba(12, 11, 11, 0.1);
+	--color-darkgray: rgba(0,0,0,0.5);
+	--color-transparentwhite: rgba(255,255,255,0.1);
+	--color-lightwhite: rgba(255,255,255,0.5);
+
+	--foreground: var(--color-dark);
+	--background: var(--color-offwhite);
+	--shadow: var(--color-darkgray);
+	--light-shadow: var(--color-lightgray);
+
+	/*
+	--break-medium: 850px;
+	--break-large: 1280px;
+	--break-huge: 1920px;
+	*/
+
+}
+/***********/
 /* LAYOUT */
 /***********/
-.Header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #149A21; 
-    color: var(--color-dark);
-    position: sticky;
-    top: 0;
-}
-    .Logo { 
-        display: block;
-        padding: 0.5em;
-    }
-    .ToggleText{
-        background-color: #149A21;
-    }
-    .ToggleIcon{
-        background-color: #149A21;
-    }
-    .ToggleMenu{
-        background-color: #149A21;
-    }
-
-.MainMenu{
-    display: block; 
-    width: 100%; 
-    max-height: calc(100vh - 3.125rem); 
-    overflow-y: auto; 
-    position: absolute; 
-    top: 3.125rem; 
-    background-color: #149A21;
-    border-top: 0.25rem solid ;
-    color:black; 
-    transform: translate3d(100%, 0, 0); 
-    will-change: transform; 
-    transition: transform 0.4s ease-out;
-}
-
 .body{
     display: block;
     min-height: 100vh;
-    margin: 0;
+    margin: 5;
     background-color: rgb(30, 29, 34);
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='30' height='30' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 0%, 1)'/><path d='M0 22.5h30v15H0zm15-15h30v15H15m-30-15h30v15h-30zm15-15h30v15H0z'  stroke-width='2.5' stroke='hsla(122, 33%, 30%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-60,-60)' fill='url(%23a)'/></svg>")
 }
+
+.Header { 
+    display: block; 
+    position: sticky; 
+    top: 0; 
+    background: #2e8537; 
+    color: black; 
+    z-index: 2; 
+    /*overflow: hidden;*/
+}
+
+.Container { 
+    position: relative; 
+}
+
+.HeaderContainer { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.Logo { 
+    display: block; 
+    padding: 0.5em;
+}
+.Logo:hover {
+    opacity: 0.8;
+}
+
+.LogoPicture { 
+    display: block;
+}
+
+.ToggleMenu { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0.75em 0.5em; 
+    font-weight: bold; 
+    background: transparent; 
+    color: var(--color-offwhite); 
+    fill: var(--color-dark); 
+    border: none; 
+    cursor: pointer;
+}
+.ToggleMenu:hover { 
+    background: var(--color-secondary); 
+    color: var(--color-dark); 
+    fill: var(--color-dark); 
+}
+.ToggleMenu:active { 
+    background: var(--color-light); 
+    color: var(--color-dark); 
+    fill: var(--color-dark); 
+}
+
+.MainMenu { 
+    display: block; 
+    width: 100%; 
+    max-height: calc(100vh - 3.125rem); 
+    top: 3.125rem; 
+    background: #2e8537; 
+    color: #2e8537; 
+    border-top: 0.25rem solid #2e8537; 
+}
+
+.MainMenuList { 
+    display: block; 
+    margin: 1rem 0 0 0; 
+    padding: 5;
+}
+
+.MainMenuItem {
+    display: block; 
+}
+.MainMenuLink { 
+    display: block; 
+    padding: 1rem; 
+    color: black; 
+    font-weight: 900; 
+    font-size: 2rem; 
+    line-height: 1em; 
+    text-decoration: none;
+}
+.MainMenuLink:active { background: var(--color-dark); color: var(--color-secondary); text-decoration: underline; }
+.MainMenuItem.Active  { background: var(--color-light); color: var(--color-dark); }
+.MainMenuLink:hover { 
+    background: #f1e204; 
+    color: black; 
+}   
+
+
+.CTAList { 
+    display: block; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.CTAItem { 
+    display: block; 
+}
+
+.CTAButton { 
+    margin: 1rem; 
+    padding: 1rem; 
+    text-align: center;
+}
+
+.CTAButton .ButtonText { 
+    width: min-content;
+}
+
+.CTAButton .ButtonTextSecondary { 
+    white-space: nowrap; 
+}
+.CTAButton .ButtonIcon {
+    display: block;
+}
+
