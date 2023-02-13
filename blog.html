@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 200px;
+      }
+      
+      .icon {
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        background-color: #009933;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        box-shadow: 2px 2px 2px #333;
+      }
+      
+      .icon:before {
+        content: "";
+        width: 40px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #009933;
+        transform: rotate(45deg);
+      }
+      
+      .icon:after {
+        content: "";
+        width: 40px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #009933;
+        transform: rotate(-45deg);
+      }
+      
+      .grass {
+        height: 40px;
+        width: 10px;
+        background-color: #009933;
+        border-radius: 5px;
+        transform: rotate(15deg);
+        margin-left: 10px;
+        box-shadow: 2px 2px 2px #333;
+        position: relative;
+      }
+      
+      .grass:before {
+        content: "";
+        height: 30px;
+        width: 8px;
+        background-color: #006622;
+        border-radius: 4px;
+        position: absolute;
+        top: 5px;
+        left: 1px;
+      }
+      
+      .grass:after {
+        content: "";
+        height: 30px;
+        width: 8px;
+        background-color: #00cc44;
+        border-radius: 4px;
+        position: absolute;
+        top: 10px;
+        left: 2px;
+      }
+
+      h1 {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #009933;
+        margin: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      li {
+        margin-right: 20px;
+      }
+      
+      a {
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <div class="icon">
+        <div class="grass"></div>
+      </div>
+      <h1>Seby Peisagistic</h1>
+    </div>
+    <ul>
+        <li><a href="#">Prima Pagina</a></li>
+        <li><a href="#">Servicii</a></li>
+        <li><a href="#">Info Utile</a></li>
+        <li><a href="#">Despre Noi</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </body>
+  </html>

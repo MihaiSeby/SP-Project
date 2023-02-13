@@ -1,7 +1,7 @@
 :root{
     --color-primary: #96001F;
     --color-secondary: #96001F;
-    --color-dark: #149A21;
+    --color-dark: black;
     --color-darker: white;
     --color-light: #96001F;
     --color-offwhite: black;
@@ -28,11 +28,7 @@
 
 }
 .Header{
-    background: Black;
-    border-bottom:0.1875em solid black;
-    border-top:0.1875em solid black;
-    border-right:0.1875em solid black;
-    border-left:0.1875em solid black;
+    background: black;
 }
 .body .Active .MainMenu{
     border-bottom:0.25rem solid black;
@@ -46,7 +42,7 @@
 }
 @media (prefers-color-scheme: #00214D)
 {
-.body .HeroTitle hr{
+.body .HeroTitle .hr{
     border-color:var(--foreground)
 }
 .Services,.BigArticle,.UsefulInformation,.Contact{
@@ -143,7 +139,8 @@ format("woff2");
     display:block;
     min-height:100vh;
     margin:0;
-    background:white url("../../resources/memphis-mini.webp") left top repeat;
+    background: rgb(110,244,98);
+    background: radial-gradient(circle, rgba(110,244,98,1) 0%, rgba(37,121,9,1) 100%);
     color:var(--foreground);
     text-rendering:optimizeSpeed
 }
@@ -322,7 +319,8 @@ format("woff2");
     display:block;
     margin:0 0 0.6666em;
     font-size:1.5rem;
-    line-height:2rem
+    line-height:2rem;
+    color:white;
 }
 @media (min-width: 850px)
 {
@@ -342,7 +340,8 @@ format("woff2");
 }
 .SectionText{
     display:block;
-    margin:1em 0
+    margin:1em 0;
+    color:white;
 }
 @-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}
 }
@@ -425,7 +424,7 @@ format("woff2");
 .LogoPicture{
     display:block;
 }
-.LogoPicture img{
+.LogoPicture .img{
     display:block;
 }
 @media (min-width: 850px)
@@ -618,17 +617,17 @@ format("woff2");
     text-decoration:none
 }
 .MainMenuLink:hover{
-    background:var(--color-light);
-    color:var(--color-dark)
+    background:#96001F;
+    color:black;
 }
 .MainMenuLink:active{
     background:var(--color-dark);
-    color:var(--color-secondary);
+    color:black;
     text-decoration:underline
 }
 .MainMenuItem.Active .MainMenuLink{
     background:var(--color-light);
-    color:var(--color-#149A21)
+    color:black;
 }
 @media (min-width: 850px)
 {
@@ -1163,7 +1162,7 @@ format("woff2");
     padding:1rem;
     position:relative;
     overflow:hidden;
-    background:var(--background);
+    background:#00214D;
     -webkit-box-shadow:0 0 2em var(--shadow);
     box-shadow:0 0 2em var(--shadow)
 }
@@ -1301,7 +1300,8 @@ format("woff2");
 }
 .ServiceText{
     display:block;
-    margin:0
+    margin:0;
+    color:white;
 }
 .CTAServices{
     margin:1rem 0
@@ -1343,8 +1343,8 @@ format("woff2");
             -ms-flex-wrap:wrap;
             flex-wrap:wrap;
             padding:2rem 1rem;
-            background:var(--color-dark);
-            color:var(--color-offwhite)
+            background:#00214D;
+            color:white
         }
     }
     @media (min-width: 1280px)
@@ -1352,7 +1352,7 @@ format("woff2");
         .Contact{
             margin-bottom:4rem;
             border-radius:2rem;
-            background:var(--color-dark) url("../images/cityscape.svg") center 30% no-repeat;
+            background:#00214D url("assets/cityscape.svg") center 30% no-repeat;
             background-size:100%;
             -webkit-box-shadow:0 0.25em 1em var(--shadow);
             box-shadow:0 0.25em 1em var(--shadow)
@@ -1379,12 +1379,14 @@ format("woff2");
     }
     .ContactContainer .SectionTitle{
         display:block;
-        margin:0
+        margin:0;
+        color:white;
     }
     @media (min-width: 1280px)
     {
         .ContactContainer .SectionTitle{
-            margin:1.5rem 0 1.5rem 0
+            margin:1.5rem 0 1.5rem 0;
+            color:white;
         }
     }
     .ContactContainer .ContactText{
@@ -1541,13 +1543,14 @@ format("woff2");
                 }
             }
             .FooterItem{
-                display:block
+                display:block;
+                color:white;
             }
             .FooterLink{
                 display:block;
                 padding:0 0 0 1rem;
                 margin:0 0 0 -1rem;
-                color:var(--color-offwhite);
+                color:var(--color-light);
                 position:relative
             }
             .FooterLink:before{
